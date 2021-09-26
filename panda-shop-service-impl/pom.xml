@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>panda-shop-parent</artifactId>
+        <groupId>com.panda.shop</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>panda-shop-service-impl</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>panda-shop-service-weixin</module>
+        <module>panda-shop-service-member</module>
+    </modules>
+
+  <dependencies>
+      <dependency>
+          <groupId>com.panda.shop</groupId>
+          <artifactId>panda-shop-service-api-weixin</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <!-- springcloud feign组件 -->
+      <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-starter-openfeign</artifactId>
+          <version>2.0.0.M1</version>
+      </dependency>
+  </dependencies>
+
+</project>
