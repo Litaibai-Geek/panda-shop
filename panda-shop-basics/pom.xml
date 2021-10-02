@@ -14,6 +14,7 @@
 
     <modules>
         <module>panda-shop-basics-eureka</module>
+        <module>panda-shop-basics-zuul</module>
     </modules>
 
 
