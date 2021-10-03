@@ -7,7 +7,7 @@
     <groupId>com.panda.shop</groupId>
     <artifactId>panda-shop-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
     <modules>
         <module>panda-shop-basics</module>
         <module>panda-shop-service-api</module>
