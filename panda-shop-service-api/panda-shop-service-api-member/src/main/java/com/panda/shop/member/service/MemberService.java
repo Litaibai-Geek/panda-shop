@@ -1,5 +1,6 @@
 package com.panda.shop.member.service;
 
+import com.panda.shop.base.BaseResponse;
 import com.panda.shop.entity.AppEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -14,5 +15,5 @@ public interface MemberService {
      */
     @ApiOperation(value = "会员服务调用微信服务")
     @GetMapping("/memberToWeiXin")
-    public AppEntity memberToWeiXin();
+    public BaseResponse<AppEntity> memberToWeiXin();
 }

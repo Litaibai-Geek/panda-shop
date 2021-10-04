@@ -29,6 +29,12 @@
             <artifactId>swagger-spring-boot-starter</artifactId>
             <version>1.7.0.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.panda.shop</groupId>
+            <artifactId>panda-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
     </dependencies>
 
     <!--注意限定版本一定为RELEASE,因为上传的对应仓库的存储类型为RELEASE -->

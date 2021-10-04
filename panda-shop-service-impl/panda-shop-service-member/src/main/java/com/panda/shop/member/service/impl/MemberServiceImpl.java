@@ -1,5 +1,7 @@
 package com.panda.shop.member.service.impl;
 
+import com.panda.shop.base.BaseApiService;
+import com.panda.shop.base.BaseResponse;
 import com.panda.shop.entity.AppEntity;
 import com.panda.shop.member.feign.WeiXinServiceFeign;
 import com.panda.shop.member.service.MemberService;
@@ -12,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @date: 2021-09-25 21:27
  **/
 @RestController
-public class MemberServiceImpl implements MemberService {
+public class MemberServiceImpl extends BaseApiService<AppEntity> implements MemberService {
 
     @Autowired
     private WeiXinServiceFeign weiXinServiceFeign;
 
-    public AppEntity memberToWeiXin() {
+    public BaseResponse<AppEntity> memberToWeiXin() {
         return weiXinServiceFeign.getApp();
     }
 }

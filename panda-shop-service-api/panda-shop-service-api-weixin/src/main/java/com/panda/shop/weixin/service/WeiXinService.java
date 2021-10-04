@@ -1,5 +1,6 @@
 package com.panda.shop.weixin.service;
 
+import com.panda.shop.base.BaseResponse;
 import com.panda.shop.entity.AppEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -10,5 +11,5 @@ public interface WeiXinService {
 
     @ApiOperation(value = "微信应用服务接口")
     @GetMapping("/getApp")
-    public AppEntity getApp();
+    public BaseResponse<AppEntity> getApp();
 }

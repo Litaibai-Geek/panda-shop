@@ -13,6 +13,7 @@
         <module>panda-shop-service-api</module>
         <module>panda-shop-api-entitys</module>
         <module>panda-shop-service-impl</module>
+        <module>panda-shop-common</module>
     </modules>
 
     <parent>

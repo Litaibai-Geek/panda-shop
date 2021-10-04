@@ -41,6 +41,11 @@
           <artifactId>apollo-core</artifactId>
           <version>1.0.0</version>
       </dependency>
+      <dependency>
+          <groupId>com.panda.shop</groupId>
+          <artifactId>panda-shop-common-core</artifactId>
+          <version>1.0-RELEASE</version>
+      </dependency>
   </dependencies>
 
 </project>
