@@ -1,7 +1,7 @@
 package com.panda.shop.weixin.mp.handler;
 
 import com.panda.shop.base.BaseResponse;
-import com.panda.shop.member.entity.UserEntity;
+import com.panda.shop.member.output.dto.UserOutDTO;
 import com.panda.shop.weixin.feign.MemberServiceFeign;
 import me.chanjar.weixin.common.api.WxConsts.XmlMsgType;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -13,7 +13,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
 import com.panda.shop.constants.Constants;
 import com.panda.shop.core.utils.RedisUtil;
 import com.panda.shop.core.utils.RegexUtils;
@@ -63,7 +62,7 @@ public class MsgHandler extends AbstractHandler {
 		// 2.使用正则表达式验证消息是否为手机号码格式
 		if (RegexUtils.checkMobile(fromContent)) {
 			// 1.根据手机号码调用会员服务接口查询用户信息是否存在
-			BaseResponse<UserEntity> reusltUserInfo = memberServiceFeign.existMobile(fromContent);
+			BaseResponse<UserOutDTO> reusltUserInfo = memberServiceFeign.existMobile(fromContent);
 			if (reusltUserInfo.getCode().equals(Constants.HTTP_RES_CODE_200)) {
 				return new TextBuilder().build("该手机号码" + fromContent + "已经存在!", wxMessage, weixinService);
 			}

@@ -1,4 +1,4 @@
-package com.panda.shop.member;
+package com.panda.shop;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import com.spring4all.swagger.EnableSwagger2Doc;

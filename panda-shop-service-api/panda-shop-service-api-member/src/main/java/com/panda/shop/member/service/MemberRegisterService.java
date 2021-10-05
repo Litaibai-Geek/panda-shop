@@ -1,13 +1,11 @@
 package com.panda.shop.member.service;
 
+import com.panda.shop.member.input.dto.UserInpDTO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.alibaba.fastjson.JSONObject;
 import com.panda.shop.base.BaseResponse;
-import com.panda.shop.member.entity.UserEntity;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -26,7 +24,7 @@ public interface MemberRegisterService {
      */
     @PostMapping("/register")
     @ApiOperation(value = "会员用户注册信息接口")
-    BaseResponse<JSONObject> register(@RequestBody UserEntity userEntity,
+    BaseResponse<JSONObject> register(@RequestBody UserInpDTO userInpDTO,
                                       @RequestParam("registCode") String registCode);
 
 }

@@ -1,10 +1,9 @@
 package com.panda.shop.member.mapper;
 
-import com.panda.shop.member.entity.UserEntity;
+import com.panda.shop.member.mapper.entity.UserDo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
 
 /**
  * @description:
@@ -14,8 +13,8 @@ import org.springframework.stereotype.Component;
 public interface UserMapper {
 
     @Insert("INSERT INTO `panda_user` VALUES (null,#{mobile}, #{email}, #{password}, #{userName}, null, null, null, '1', null, null, null);")
-    int register(UserEntity userEntity);
+    int register(UserDo userEntity);
 
     @Select("SELECT * FROM panda_user WHERE MOBILE=#{mobile};")
-    UserEntity existMobile(@Param("mobile") String mobile);
+    UserDo existMobile(@Param("mobile") String mobile);
 }

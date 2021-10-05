@@ -1,23 +1,25 @@
-package com.panda.shop.member.entity;
+package com.panda.shop.member.output.dto;
 
-import java.util.Date;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import java.util.Date;
+
 /**
- * @description: 用户信息实体类
+ * @description: 响应返回参数
  * @author: 李太白
  * @date: 2021-10-04 21:49
  **/
 @Data
-@ApiModel(value = "用户中注册")
-public class UserEntity {
+@ApiModel(value = "用户返回参数")
+public class UserOutDTO {
 
     /**
      * userid
      */
     @ApiModelProperty(value = "用户id")
-    private Long userid;
+    private Long userId;
     /**
      * 手机号码
      */
@@ -28,11 +30,6 @@ public class UserEntity {
      */
     @ApiModelProperty(value = "邮箱")
     private String email;
-    /**
-     * 密码
-     */
-    @ApiModelProperty(value = "密码")
-    private String password;
     /**
      * 用户名称
      */
@@ -47,7 +44,7 @@ public class UserEntity {
      * 年龄
      */
     @ApiModelProperty(value = "用户年龄")
-    private Long age;
+    private Integer age;
     /**
      * 注册时间
      */
@@ -63,20 +60,34 @@ public class UserEntity {
      * 账号是否可以用 1 正常 0冻结
      */
     @ApiModelProperty(value = "账号是否可以用 1 正常 0冻结")
-    private char is_avalible;
+    private char isAvalible;
     /**
      * 用户头像
      */
     @ApiModelProperty(value = " 用户头像")
-    private String pic_img;
+    private String picImg;
     /**
      * 用户关联 QQ 开放ID
      */
     @ApiModelProperty(value = "用户关联 QQ 开放ID")
-    private Date qq_openid;
+    private String qqOpenId;
     /**
      * 用户关联 微信 开放ID
      */
     @ApiModelProperty(value = "用户关联 微信 开放ID")
-    private Date WX_OPENID;
+    private String wxOpenId;
+
+    private Boolean isVip;
+
+    // 目前存在的问题： 接口层传递实体类→数据库传递实体类 都是相同的。
+    // 注册的时候不需要传递isAvalible updateTime createTime
+    // 查询的用户相关信息的时候，是不需要将密码返回给客户端
+    // 请求参数与返回参数如果公用同一个实体类会存在那些问题？ 可能会暴露数据库字段攻击 安全性
+    // 修改用户密码
+
+    // DTO 主要用于外部接口参数传递封装 接口与接口进行传递使用
+    // DO主要操作用于数据库层传递
+    // VO主要用于视图层展示
+    // DTO转换DO (接口接受参数，转换为数据库实体类插入数据库中) DO转换DTO（向数据库查询数据转换DTO返回给客户端）
+
 }

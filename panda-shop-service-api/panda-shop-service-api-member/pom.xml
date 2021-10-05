@@ -14,12 +14,12 @@
     <dependencies>
         <dependency>
             <groupId>com.panda.shop</groupId>
-            <artifactId>panda-shop-api-weixin-entity</artifactId>
+            <artifactId>panda-shop-api-weixin-dto</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.panda.shop</groupId>
-            <artifactId>panda-shop-api-member-entity</artifactId>
+            <artifactId>panda-shop-api-member-dto</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
     </dependencies>

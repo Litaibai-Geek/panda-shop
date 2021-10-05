@@ -3,17 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>panda-shop-api-entitys</artifactId>
+        <artifactId>panda-shop-parent</artifactId>
         <groupId>com.panda.shop</groupId>
         <version>1.0-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>panda-shop-api-member-entity</artifactId>
+    <artifactId>panda-shop-api-dto</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>panda-shop-api-member-dto</module>
+        <module>panda-shop-api-weixin-dto</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <!-- swagger-spring-boot -->
+    <dependencies>
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.7.0.RELEASE</version>
+        </dependency>
+    </dependencies>
 
 </project>
