@@ -11,5 +11,18 @@
 
     <artifactId>panda-shop-service-api-weixin</artifactId>
 
+    <dependencies>
+        <!-- 引入微信实体类层 -->
+        <dependency>
+            <groupId>com.panda.shop</groupId>
+            <artifactId>panda-shop-api-weixin-entity</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.panda.shop</groupId>
+            <artifactId>panda-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>

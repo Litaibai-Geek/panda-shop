@@ -17,19 +17,6 @@
     </modules>
 
     <dependencies>
-        <!-- 引入微信实体类层 -->
-        <dependency>
-            <groupId>com.panda.shop</groupId>
-            <artifactId>panda-shop-service-api-weixin-entity</artifactId>
-            <version>1.0-RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.spring4all</groupId>
-            <artifactId>swagger-spring-boot-starter</artifactId>
-            <version>1.7.0.RELEASE</version>
-        </dependency>
-
         <dependency>
             <groupId>com.panda.shop</groupId>
             <artifactId>panda-shop-common-core</artifactId>

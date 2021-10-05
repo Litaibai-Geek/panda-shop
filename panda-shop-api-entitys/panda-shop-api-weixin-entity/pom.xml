@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>panda-shop-service-api-weixin-entity</artifactId>
+    <artifactId>panda-shop-api-weixin-entity</artifactId>
 
 
 </project>

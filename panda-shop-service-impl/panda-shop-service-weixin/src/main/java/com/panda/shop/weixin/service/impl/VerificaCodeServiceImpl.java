@@ -5,7 +5,7 @@ import com.panda.shop.base.BaseApiService;
 import com.panda.shop.base.BaseResponse;
 import com.panda.shop.constants.Constants;
 import com.panda.shop.core.utils.RedisUtil;
-import com.panda.shop.member.service.VerificaCodeService;
+import com.panda.shop.weixin.service.VerificaCodeService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
