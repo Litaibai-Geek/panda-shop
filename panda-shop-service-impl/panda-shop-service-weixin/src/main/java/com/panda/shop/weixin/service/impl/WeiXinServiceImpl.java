@@ -1,9 +1,8 @@
 package com.panda.shop.weixin.service.impl;
 
-
 import com.panda.shop.base.BaseApiService;
 import com.panda.shop.base.BaseResponse;
-import com.panda.shop.entity.AppEntity;
+import com.panda.shop.weixin.entity.AppEntity;
 import com.panda.shop.weixin.service.WeiXinService;
 import org.springframework.web.bind.annotation.RestController;
 

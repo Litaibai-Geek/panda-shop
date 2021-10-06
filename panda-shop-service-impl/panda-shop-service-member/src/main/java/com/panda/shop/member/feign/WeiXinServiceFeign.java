@@ -1,6 +1,5 @@
 package com.panda.shop.member.feign;
 
-import com.panda.shop.entity.AppEntity;
 import com.panda.shop.weixin.service.WeiXinService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

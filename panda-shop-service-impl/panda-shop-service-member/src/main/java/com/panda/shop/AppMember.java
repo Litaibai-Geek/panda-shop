@@ -19,7 +19,6 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 @EnableSwagger2Doc
 @EnableApolloConfig
-
 @MapperScan(basePackages = "com.panda.shop.member.mapper")
 public class AppMember {
 
