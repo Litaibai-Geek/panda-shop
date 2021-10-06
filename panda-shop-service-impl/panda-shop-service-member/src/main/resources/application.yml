@@ -53,7 +53,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/panda_shop
+    url: jdbc:mysql://127.0.0.1:3306/panda_shop?useSSL=false
 
 ### 打印Mybatis日志
 logging:
