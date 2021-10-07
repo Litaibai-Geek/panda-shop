@@ -32,5 +32,12 @@
             <artifactId>panda-shop-service-api-member</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
+        <!-- 腾讯QQ互联jar包 -->
+        <!-- 需要手动打包到本地 ：mvn install:install-file -Dfile="E:\Sdk4J.jar" -DgroupId=com.tengxun -DartifactId=sdk4j  -Dversion=1.0 -Dpackaging=jar -->
+        <dependency>
+            <groupId>com.tengxun</groupId>
+            <artifactId>sdk4j</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 </project>
